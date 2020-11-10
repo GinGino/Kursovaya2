@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.398,C:\Users\Админ\Desktop\1.11.2020 первое продвижение\Unit1.dfm=C:\Users\Админ\Desktop\2Курсач\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.765,C:\Users\Админ\Desktop\1.11.2020 первое продвижение\Project1.cbproj=C:\Users\Админ\Desktop\2Курсач\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.398,C:\Users\Админ\Desktop\1.11.2020 первое продвижение\Unit1.cpp=C:\Users\Админ\Desktop\2Курсач\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.398,C:\Users\Админ\Desktop\1.11.2020 первое продвижение\Unit1.h=C:\Users\Админ\Desktop\2Курсач\Unit1.h</Transaction>
+  </Transactions>
+</BorlandProject>
