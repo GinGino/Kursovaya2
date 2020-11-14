@@ -35,12 +35,12 @@ int N=1;
 int left_pos = 240;
 vector<vector<AddLvl>> Vec;
 //---------------------------------------------------------------------------
- void dfs(int val) {
+ void dfs( ) {
   Form1->Result->Text="";
- top->u=Form1->Number1->Text.ToInt();
- top->v=Form1->Number2->Text.ToInt();
   Vec.resize(N+1);
  top = new AddLvl();
+ top->u=Form1->Number1->Text.ToInt();
+ top->v=Form1->Number2->Text.ToInt();
  top->edit = new TEdit(Form1);
  top->edit->Parent=Form1;
  top->edit->Name="Leave"+IntToStr(top->v);
@@ -56,10 +56,10 @@ vector<vector<AddLvl>> Vec;
  cur = top;
  left_pos += 120;
  Vec[top->u].push_back(top->v);
- //	Form1->Result->Text+=val;
-	for(top->node: Vec[val]) {
-	   dfs(top->node);
-	}
+ 	Form1->Result->Text+=val;
+  	for(top->node: Vec[val]) {
+  	   dfs(top->node);
+  	}
 
 }
 
@@ -77,5 +77,5 @@ void __fastcall TForm1::AddRootClick(TObject *Sender)
 
 void __fastcall TForm1::AddLeavesClick(TObject *Sender)
 {
- dfs(1);
+ dfs();
 }
