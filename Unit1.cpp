@@ -35,15 +35,15 @@ int N=1;
 int left_pos = 240;
 vector<vector<AddLvl>> Vec;
 //---------------------------------------------------------------------------
- void dfs( ) {
+ void dfs(int val) {
   Form1->Result->Text="";
- AddLvl.u=Form1->Number1->Text.ToInt();
- AddLvl.v=Form1->Number2->Text.ToInt();
+ top->u=Form1->Number1->Text.ToInt();
+ top->v=Form1->Number2->Text.ToInt();
   Vec.resize(N+1);
  top = new AddLvl();
  top->edit = new TEdit(Form1);
  top->edit->Parent=Form1;
- top->edit->Name="Leave"+IntToStr(AddLvl.v);
+ top->edit->Name="Leave"+IntToStr(top->v);
  top->edit->Text=Form1->Number2->Text;
  top->edit->Width=60;
  top->edit->Height=21;
@@ -55,11 +55,11 @@ vector<vector<AddLvl>> Vec;
 
  cur = top;
  left_pos += 120;
- Vec[AddLvl.u].push_back(AddLvl.v);
+ Vec[top->u].push_back(top->v);
  //	Form1->Result->Text+=val;
- 	for(AddLvl.node: Vec[per]) {
-  	   dfs(AddLvl.node);
-  	}
+	for(top->node: Vec[val]) {
+	   dfs(top->node);
+	}
 
 }
 
@@ -77,10 +77,5 @@ void __fastcall TForm1::AddRootClick(TObject *Sender)
 
 void __fastcall TForm1::AddLeavesClick(TObject *Sender)
 {
- dfs( );
+ dfs(1);
 }
-//---------------------------------------------------------------------------
-
-//---------------------------------------------------------------------------
-
-
